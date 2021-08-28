@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js – Teoría de Juegos</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+		
+		
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+
+	<body>   
+		<div class="reveal">
+			
+				<div id="header">
+					<div class="header-left">  <p style="font-size:25%;"> Romero-Gelvez, J | 
+				   <a href="mailto:jorgei.romerog@utadeo.edu.co"> jorgei.romerog@utadeo.edu.co</a></p> </div>
+				</div>
+		
+			<div class="slides">
+				<section data-transition="slide" data-background="#fff">
+					<a href="https://www.utadeo.edu.co">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Jorge_Tadeo_Lozano_University_logo.svg/1200px-Jorge_Tadeo_Lozano_University_logo.svg.png" 
+						alt="logo" style="height: 200px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					
+					<h3>INVESTIGACIÓN DE OPERACIONES II </h3>
+					<p>Teoría de Juegos-2</p>
+				
+					<p>
+						<small>Profesor <a href="https://www.utadeo.edu.co/es/person/11924/Industrias-y-Tecnolog%C3%ADas-Digitales">Jorge Ivan Romero</a> 
+							</small>
+					</p>
+				</section>
+				<section data-transition="convex">
+					<h2>1. Teoría de juegos, racionalidad e inteligencia</h2>
+					<p style="color:#003865 ;"><span style="display: inline-block;" class="fragment fade-up">
+						La teoría de juegos se puede definir como: </span></p>
+						<span style="text-align: justify" class="fragment fade-left">
+						<p ><q>El estudio de modelos matemáticos de conflicto y cooperación entre tomadores de decisiones racionales inteligentes.</q>
+					</span></p>
+					<p >
+						<span style="display: inline-block;" class="fragment fade-left">
+						<small>Myerson, R. B. (2013). 
+						<b>Game theory. Harvard university press.</b></small></span></p>
+
+				  </section>
+				  <section data-transition="convex">
+					<h2>1. Teoría de juegos, racionalidad e inteligencia-2</h2>
+					
+					<span style="text-align: justify" class="fragment fade-left">
+						<p ><q>La teoría de juegos proporciona técnicas matemáticas generales para analizar situaciones en las que dos o más individuos toman decisiones que influirán en el bienestar del otro.</q>
+					</span></p>
+					<p >
+						<span style="text-align: justify" class="fragment fade-left">
+						<small>Myerson, R. B. (2013). 
+						<b>Game theory. Harvard university press.</b></small></span></p>
+				  </section>
+				</section>
+				<section data-transition="convex">
+				  <h2>1. Teoría de juegos, racionalidad e inteligencia-3</h2>
+				  
+					  <span style="text-align: justify" class="fragment fade-left">
+					  <p ><q>Las situaciones que estudia la teória de juegos no comprende simplemente actividades recreativas, como desafortunadamente podría sugerir el término "juego". "Análisis de conflictos" o "teoría de la decisión interactiva" podrían ser nombres más precisos desde el punto de vista descriptivo.</q>
+				  </span></p>
+				  <p >
+					  <span style="display: inline-block;" class="fragment fade-left">
+					  <small>Myerson, R. B. (2013). 
+					  <b>Game theory. Harvard university press.</b></small></span></p>
+				</section>
+				<section>
+					<section>
+						<h2>2. Tipos de juegos</h2>
+						<span style="text-align: justify" class="fragment fade-left">
+						<p>La sesión anterior, definimos los juegos suma cero como situaciones donde lo que un competidor gana, el otro lo pierde. En estas situaciones existen dos tipos de juegos, <emp style="color:red;">los juegos de estrategias puras</emp> y <emp style="color:green;">los juegos de estrategias mixtas.</emp></p></span>
+					</section>
+					<section>
+						<h2 style="">2. Tipos de juegos-2</h2>
+						    <span style="text-align: justify" class="fragment fade-left">
+							<p><small><emp style="color:red;">Los juegos de estrategias puras </emp> referencia a situaciones donde la elección de una estrategia tiene un 100% de probabilidad. <i>Formalmente:</i> </small></p></span>
+							<small>un juego rectangular consta de un conjunto $N$ de una colección de conjuntos ${\displaystyle \{{D_{j}}\}_{j\in N}}{\displaystyle \{{D_{j}}\}_{j\in N}}$ y de una colección de funciones ${\displaystyle \{{\varphi _{j}}\}_{j\in N}}{\displaystyle \{{\varphi _{j}}\}_{j\in N}}$ donde</small>
+							<span style="display: inline-block;" class="fragment fade-left">	
+							$$\varphi_{j}: \prod_{j \in N} D_{j} \rightarrow \mathbb{R}	$$
+							</span>
+							<span style="text-align: justify" class="fragment fade-left">
+							<small>A $N$ le llamaremos el conjunto de jugadores, a cada 
+								${\displaystyle D_{j}}$ el conjunto de estrategias puras del jugador $j$ 
+								y a ${\displaystyle \varphi _{j}}$ la función de pago del jugador $j$. Si denotamos con ${\displaystyle D}$ 
+								al producto cartesiano de las ${\displaystyle D_{j}}$, entonces a los elementos de ${\displaystyle D}$
+								 los llamaremos perfiles de estrategias puras.
+
+								Así pues, una estrategia pura para el jugador $j$ es cualquier elemento de ${\displaystyle D_{j}}$
+								 y un perfil de estrategias puras se obtiene tomando una estrategia pura para cada jugador en $N$ estrategias.</small>
+							</span>
+					</section>
+					<section>
+						<h2>2. Tipos de juegos-3 </h2>
+								<span style="text-align: justify" class="fragment fade-left">
+								<small>Dado un juego rectangular $(N,D_j,{\phi}_j)$, decimos que $X^j \in R^{l_j}$ es una estrategia mixta del jugador j, si para toda $\sigma^j \in D_j$, $x_{\sigma^j}^j \geq 0$ y $\sum_{\sigma^j \in D_j} x_{\sigma j}^j = 1$. El entero $l_j$ denota el número de estrategias puras del jugador j.
+									
+									Intuitivamente, una estrategia mixta es un vector que asocia cierta probabilidad a cada estrategia pura del jugador j, de ahí que cada entrada tenga que ser no negativa y la suma de todas ellas sea 1.
+									
+									En una estrategia mixta $X^j$ del jugador j, $x_{\sigma^k}^j$ se interpreta como el peso o probabilidad que el jugador j le asocia a su estrategia pura $\sigma^k$.
+									
+									La letra $M_j$ denotará al conjunto de estrategias mixtas del jugador j y M al producto cartesiano de los conjuntos $M_j$. A cada elemento de M lo llamaremos un perfil de estrategias mixtas.
+									
+									En particular, podemos considerar una estrategia mixta de la forma $x_{\sigma^k}^j=1$ para algún k, $x_{\sigma^i}^j=0$ para todo i distinto de k. Dichas estrategias corresponden a las estrategias puras, de aquí que estas últimas sean un caso particular de las estrategia mixtas.
+								</small>
+								En resumen..<i class='fas fa-chalkboard-teacher' style='font-size:36px'></i>
+								<br>
+								
+							</section>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								## Evaluemos un ejemplo a continuacion: ✏️
+								**Ejemplo 15.4-4 del libro de Taha Hamdy 9 ed**	Resuelva el siguiente juego mediante programación lineal. El valor del juego, $v$, queda entre -2 y 2.
+								
+								
+								|         	    | $B_{1}$ 	| $B_{2}$ 	| $B_{3}$ 	| Fila mín 	|
+								|:----------:	|:--:	|:--:	|:--:	|:--------:	|
+								|   **$A_{1}$**   	|  3 	| -1 	| -3 	|    -3    	|
+								|   **$A_{2}$**   	| -2 	|  4 	| -1 	|    **-2**    	|
+								|   **$A_{3}$**   	| -5 	| -6 	|  2 	|    -6    	|
+								| **Col max** 	| 3 	|  4 	|  **2** 	|          	|
+								
+								___________________________
+												
+								
+
+
+
+							</textarea>
+						  </section>
+
+						<section>
+							<h2>FORMULACION - JUGADOR A</h2> 
+
+\begin{array}
+\operatorname{Maximizar} z=v
+\end{array}
+
+
+Sujeto a 
+
+
+\[\begin{aligned}
+v-3 x_{1}+2 x_{2}+5 x_{3} \leq 0\\
+v+x_{1}-4 x_{2}+6 x_{3} \leq 0\\
+v+3 x_{1}+x_{2}-2 x_{3} \leq 0\\
+x_{1}+x_{2}+x_{3}=1\\
+x_{1}, x_{2}, x_{3} \geq 0\\
+v \ \ irrestricta
+\end{aligned} \]
+						</section>
+
+							<section data-auto-animate>
+								<h2 data-id="code-title">En Google OR:</h2>
+								<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+from ortools.linear_solver import pywraplp
+
+def jugadorA():
+    """Juegos-jugador1."""
+    # Agregar el solver CBC al problema
+    solver = pywraplp.Solver.CreateSolver('CBC')
+    # Crear las VARIABLES.
+    v = solver.NumVar(-solver.infinity(), solver.infinity(), 'v')
+    x1 = solver.NumVar(0, solver.infinity(), 'x1')
+    x2 = solver.NumVar(0, solver.infinity(), 'x2')
+    x3 = solver.NumVar(0, solver.infinity(), 'x3')
+    print('Numero de variables =', solver.NumVariables())
+    # Constraint 0: 
+    solver.Add(v - 3*x1+2*x2+5*x3 <= 0.0)
+    # Constraint 1: 
+    solver.Add(v + x1 - 4*x2+6*x3 <= 0.0)
+    # Constraint 2:
+    solver.Add(v+3*x1 + x2-2*x3 <= 0.0)
+    # Constraint 3:
+    solver.Add(x1+x2+x3 == 1.0)
+    print('Numero de restricciones =', solver.NumConstraints())
+    # Funcion objetivo: 
+    solver.Maximize(v)
+    # resolvemos el problema.
+    status = solver.Solve()
+
+    if status == pywraplp.Solver.OPTIMAL:
+        print('Solucion:')
+        print('Z =', solver.Objective().Value())
+        print('x1 =', x1.solution_value())
+        print('x2 =', x2.solution_value())
+        print('x3 =', x3.solution_value())
+        print('V =', v.solution_value())
+    else:
+        print('Grave!, el problema no tiene solucion, reviselo!.')
+
+    print('\nAvanzado:')
+    print('Problem solved in %f milliseconds' % solver.wall_time())
+    print('Problem solved in %d iterations' % solver.iterations())
+
+jugadorA()
+								</code></pre>
+								
+							</section>
+							<section data-auto-animate>
+								<h2 data-id="code-title">EN GOOGLE OR</h2>
+								<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3|6|8-11|13-20|23|25|27-35|41"><script type="text/template">
+									from ortools.linear_solver import pywraplp
+
+									def jugadorA():
+										"""Juegos-jugador1."""
+										# Agregar el solver CBC al problema
+										solver = pywraplp.Solver.CreateSolver('CBC')
+										# Crear las VARIABLES.
+										v = solver.NumVar(-solver.infinity(), solver.infinity(), 'v')
+										x1 = solver.NumVar(0, solver.infinity(), 'x1')
+										x2 = solver.NumVar(0, solver.infinity(), 'x2')
+										x3 = solver.NumVar(0, solver.infinity(), 'x3')
+										print('Numero de variables =', solver.NumVariables())
+										# Constraint 0: 
+										solver.Add(v - 3*x1+2*x2+5*x3 <= 0.0)
+										# Constraint 1: 
+										solver.Add(v + x1 - 4*x2+6*x3 <= 0.0)
+										# Constraint 2:
+										solver.Add(v+3*x1 + x2-2*x3 <= 0.0)
+										# Constraint 3:
+										solver.Add(x1+x2+x3 == 1.0)
+										print('Numero de restricciones =', solver.NumConstraints())
+										# Funcion objetivo: 
+										solver.Maximize(v)
+										# resolvemos el problema.
+										status = solver.Solve()
+									
+										if status == pywraplp.Solver.OPTIMAL:
+											print('Solucion:')
+											print('Z =', solver.Objective().Value())
+											print('x1 =', x1.solution_value())
+											print('x2 =', x2.solution_value())
+											print('x3 =', x3.solution_value())
+											print('V =', v.solution_value())
+										else:
+											print('Grave!, el problema no tiene solucion, reviselo!.')
+									
+										print('\nAvanzado:')
+										print('Problem solved in %f milliseconds' % solver.wall_time())
+										print('Problem solved in %d iterations' % solver.iterations())
+									
+									jugadorA()
+								</script></code></pre>
+							</section>
+				<section data-transition="slide" data-background="#003865">
+					Gracias por su atencion!
+					<small>Ahora probemos con otros problemas adicionales en Hillier Ch15</small>
+					
+					<img src="https://miro.medium.com/max/986/1*S2AyJcdw8EPcn7gwDVSBCA.png" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					
+				</section>
+				
+			</div>
+		</div>
+
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+       <script src="plugin/chalkboard/plugin.js"></script>
+	   <script src="plugin/customcontrols/plugin.js"></script>
+	   <script src="plugin/math/math.js"></script>
+
+</script>
+	   
+		
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: false,
+				hash: true,slideNumber: 'c/t',
+				customcontrols: {
+		slideNumberCSS : 'position: fixed; display: block; right: 90px; top: auto; left: auto; width: 50px; bottom: 30px; z-index: 31; font-family: Helvetica, sans-serif; font-size:  12px; line-height: 1; padding: 5px; text-align: center; border-radius: 10px; background-color: rgba(128,128,128,.5)',
+		controls: [
+			{ icon: '<i class="fa fa-caret-left"></i>',
+			  css: 'position: fixed; right: 60px; bottom: 30px; z-index: 30; font-size: 24px;',
+			  action: 'Reveal.prev(); return false;'
+			},
+			{ icon: '<i class="fa fa-caret-right"></i>',
+			  css: 'position: fixed; right: 30px; bottom: 30px; z-index: 30; font-size: 24px;',
+			  action: 'Reveal.next(); return false;'
+			}
+		]
+	},	math: {
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      // pass other options into `MathJax.Hub.Config()`
+      TeX: { Macros: { RR: "{\\bf R}" } }
+    },
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMath, RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard,RevealCustomControls ]
+			});
+			
+			Reveal.configure({ pdfMaxPagesPerSlide: 1 });
+			Reveal.configure({ pdfSeparateFragments: false });
+	   </script>
+		
+			
+	</body>
+</html>
