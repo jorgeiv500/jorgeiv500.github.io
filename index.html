@@ -150,6 +150,34 @@
   footer.foot{background:#010409;color:#8b949e;text-align:center;padding:26px 0;font-size:.85rem}
   footer.foot a{color:#dcdcdc}
   .ico{width:17px;height:17px;vertical-align:-3px;fill:currentColor}
+  .cbox svg{width:26px;height:26px;margin-bottom:13px;opacity:.95}
+
+  /* PROJECTS */
+  .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:18px}
+  .proj{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+  .proj:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .proj .ptop{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+  .proj .picon{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;font-size:1.3rem;background:var(--gh-dark-2);border:1px solid var(--gh-border);flex:0 0 42px}
+  .proj h3{font-size:1.04rem;line-height:1.2}
+  .proj p{color:var(--muted);font-size:.9rem;margin:2px 0 14px}
+  .proj .ptags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .proj .ptag{background:#f0f0f0;border:1px solid #e2e2e2;color:#444;font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:999px}
+  .proj .plinks{margin-top:auto;display:flex;gap:16px;font-size:.86rem;font-weight:600}
+  .proj .plinks a.live{color:var(--gh-green)}
+  .badge-live{display:inline-flex;align-items:center;gap:6px}
+  .badge-live:before{content:"";width:8px;height:8px;border-radius:50%;background:#1f9d55;box-shadow:0 0 0 3px rgba(31,157,85,.18)}
+
+  /* PRESS carousel */
+  .press-scroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px}
+  .press-scroll::-webkit-scrollbar{height:8px}
+  .press-scroll::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:8px}
+  .press-card{scroll-snap-align:start;flex:0 0 300px;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gh-green);border-radius:14px;padding:18px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
+  .press-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);text-decoration:none}
+  .press-card .outlet{display:flex;align-items:center;gap:9px;margin-bottom:11px}
+  .press-card .outlet img{width:22px;height:22px;object-fit:contain;border-radius:5px}
+  .press-card .outlet b{font-size:.8rem;color:var(--gh-green-d);text-transform:uppercase;letter-spacing:.04em}
+  .press-card .pt{color:var(--ink);font-weight:600;font-size:.97rem;line-height:1.34;margin-bottom:12px}
+  .press-card .pd{color:var(--muted);font-size:.82rem;margin-top:auto}
 </style>
 </head>
 <body class="lang-en">
@@ -163,6 +191,8 @@
         <a href="#experience"><span class="en">Experience</span><span class="es" hidden>Trayectoria</span></a>
         <a href="#research"><span class="en">Research</span><span class="es" hidden>Investigación</span></a>
         <a href="#conferences"><span class="en">Conferences</span><span class="es" hidden>Conferencias</span></a>
+        <a href="#projects"><span class="en">Projects</span><span class="es" hidden>Proyectos</span></a>
+        <a href="#media"><span class="en">Media</span><span class="es" hidden>Medios</span></a>
         <a href="#teaching"><span class="en">Teaching</span><span class="es" hidden>Docencia</span></a>
         <a href="#contact"><span class="en">Contact</span><span class="es" hidden>Contacto</span></a>
       </nav>
@@ -379,6 +409,7 @@
         <div class="card">
           <h3><span class="en">Supervised theses (since 2018)</span><span class="es" hidden>Tesis dirigidas (desde 2018)</span></h3>
           <p style="margin-top:8px">1 <span class="en">doctoral</span><span class="es" hidden>doctorado</span> · 8 <span class="en">master's</span><span class="es" hidden>maestría</span> · 52 <span class="en">undergraduate</span><span class="es" hidden>pregrado</span>.</p>
+          <p style="margin-top:8px;color:var(--accent);font-weight:600"><span class="en">Currently directing doctoral theses in the Doctorate in Engineering.</span><span class="es" hidden>Actualmente dirigiendo tesis doctorales en el Doctorado en Ingeniería.</span></p>
           <p style="margin-top:10px"><a href="https://docs.google.com/spreadsheets/d/1XkFW6jdIio44IFmKCcjqYLdsNhHzAt1qZ0ZJUr4mFNw/edit?usp=sharing" target="_blank" rel="noopener"><span class="en">Open the full thesis database →</span><span class="es" hidden>Ver la base de datos completa →</span></a></p>
         </div>
       </div>
@@ -460,6 +491,97 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="light">
+  <div class="wrap">
+    <span class="eyebrow"><span class="en">Projects</span><span class="es" hidden>Proyectos</span></span>
+    <h2 class="sec-title"><span class="en">Deployed projects</span><span class="es" hidden>Proyectos desplegados</span></h2>
+    <p class="sec-lead"><span class="en">Live apps built with Next.js, LLM APIs, Supabase, Phaser and computer vision — deployed on Vercel.</span><span class="es" hidden>Apps en vivo hechas con Next.js, APIs de LLM, Supabase, Phaser y visión por computador — desplegadas en Vercel.</span></p>
+    <div class="proj-grid">
+
+      <div class="proj">
+        <div class="ptop"><div class="picon">🎮</div><h3><span class="en">Misión Tadeo — CV game</span><span class="es" hidden>Misión Tadeo — juego con visión</span></h3></div>
+        <p><span class="en">Utadeo induction game with computer-vision control (MediaPipe), gamepad support and pixel art.</span><span class="es" hidden>Juego de inducción de Utadeo con control por visión por computador (MediaPipe), soporte de gamepad y pixel art.</span></p>
+        <div class="ptags"><span class="ptag">Next.js</span><span class="ptag">Phaser</span><span class="ptag">Tailwind</span><span class="ptag">MediaPipe</span><span class="ptag">Pixel art</span></div>
+        <div class="plinks"><a href="https://github.com/jorgeiv500/juego-cv-induccion" target="_blank" rel="noopener">GitHub →</a></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptop"><div class="picon">🤖</div><h3><span class="en">Utadeo Chatbot (OpenAI + Supabase)</span><span class="es" hidden>Chatbot Utadeo (OpenAI + Supabase)</span></h3></div>
+        <p><span class="en">Conversational assistant powered by the OpenAI API with a Supabase vector backend (RAG).</span><span class="es" hidden>Asistente conversacional con la API de OpenAI y backend vectorial en Supabase (RAG).</span></p>
+        <div class="ptags"><span class="ptag">OpenAI API</span><span class="ptag">Supabase</span><span class="ptag">Next.js</span><span class="ptag">RAG</span></div>
+        <div class="plinks"><a class="live badge-live" href="https://utadeo-chatbot-openai-supabase.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/utadeo-chatbot-openai-supabase" target="_blank" rel="noopener">GitHub →</a></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptop"><div class="picon">💬</div><h3><span class="en">Fair chatbot (APIs)</span><span class="es" hidden>Chatbot de feria (APIs)</span></h3></div>
+        <p><span class="en">LLM-API chatbot built for academic fairs and program promotion.</span><span class="es" hidden>Chatbot con APIs de LLM creado para ferias académicas y promoción de programas.</span></p>
+        <div class="ptags"><span class="ptag">LLM API</span><span class="ptag">Next.js</span><span class="ptag">Chatbot</span></div>
+        <div class="plinks"><a class="live badge-live" href="https://chat-feria.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/my-chatbot" target="_blank" rel="noopener">GitHub →</a></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptop"><div class="picon">🧮</div><h3>Tadeobot — <span class="en">Precalculus assistant</span><span class="es" hidden>asistente de precálculo</span></h3></div>
+        <p><span class="en">LLM tutoring assistant for precalculus, with guided step-by-step help.</span><span class="es" hidden>Asistente tutor con LLM para precálculo, con ayuda guiada paso a paso.</span></p>
+        <div class="ptags"><span class="ptag">LLM</span><span class="ptag">Next.js</span><span class="ptag">Education</span></div>
+        <div class="plinks"><a class="live badge-live" href="https://precalculo-assistant-app.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/tadeobot" target="_blank" rel="noopener">GitHub →</a></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptop"><div class="picon">🧑‍🏫</div><h3><span class="en">GenAI diagnosis for faculty</span><span class="es" hidden>Diagnóstico de IA generativa docente</span></h3></div>
+        <p><span class="en">Web tool to diagnose generative-AI adoption and skills among university teachers.</span><span class="es" hidden>Herramienta web para diagnosticar la adopción y competencias en IA generativa del profesorado.</span></p>
+        <div class="ptags"><span class="ptag">Next.js</span><span class="ptag">Generative AI</span><span class="ptag">Survey</span></div>
+        <div class="plinks"><a class="live badge-live" href="https://diagnostico-ia-generativa-docentes.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/diagnostico-ia-generativa-docentes" target="_blank" rel="noopener">GitHub →</a></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptop"><div class="picon">📊</div><h3>Utadeo Dashboard</h3></div>
+        <p><span class="en">Interactive analytics dashboard for institutional data and indicators.</span><span class="es" hidden>Tablero analítico interactivo para datos e indicadores institucionales.</span></p>
+        <div class="ptags"><span class="ptag">Next.js</span><span class="ptag">Dashboards</span><span class="ptag">Data viz</span></div>
+        <div class="plinks"><a class="live badge-live" href="https://utadeo-dashboard.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/utadeo-dashboard" target="_blank" rel="noopener">GitHub →</a></div>
+      </div>
+
+    </div>
+    <p style="color:var(--muted);font-size:.9rem;margin-top:18px"><span class="en">More repositories on </span><span class="es" hidden>Más repositorios en </span><a href="https://github.com/jorgeiv500?tab=repositories" target="_blank" rel="noopener">github.com/jorgeiv500</a>.</p>
+  </div>
+</section>
+
+<!-- IN THE MEDIA -->
+<section id="media">
+  <div class="wrap">
+    <span class="eyebrow"><span class="en">In the media</span><span class="es" hidden>En los medios</span></span>
+    <h2 class="sec-title"><span class="en">Press &amp; commentary</span><span class="es" hidden>Prensa y opinión</span></h2>
+    <p class="sec-lead"><span class="en">Quoted as an AI and digital-technologies expert in Colombian media.</span><span class="es" hidden>Citado como experto en IA y tecnologías digitales en medios colombianos.</span></p>
+    <div class="press-scroll">
+
+      <a class="press-card" href="https://cambiocolombia.com/tecnologia/articulo/2025/11/esta-la-nube-al-borde-del-colapso-las-caidas-de-aws-y-azure-exponen-el-talon-de-aquiles-de-la-economia-digital-global/" target="_blank" rel="noopener">
+        <div class="outlet"><img src="img/press/cambio.png" alt="Revista CAMBIO" loading="lazy" onerror="this.style.display='none'"><b>Revista CAMBIO</b></div>
+        <div class="pt"><span class="en">Is the cloud on the verge of collapse? The AWS and Azure outages expose the Achilles' heel of the global digital economy.</span><span class="es" hidden>¿Está la nube al borde del colapso? Las caídas de AWS y Azure exponen el talón de Aquiles de la economía digital global.</span></div>
+        <div class="pd">Nov 2025 · <span class="en">on digital concentration risk</span><span class="es" hidden>sobre el riesgo de concentración digital</span></div>
+      </a>
+
+      <a class="press-card" href="https://www.semana.com/hablan-las-marcas/articulo/aprender-en-tiempos-de-inteligencia-artificial-asi-se-transforma-la-educacion-superior-en-colombia/202500/" target="_blank" rel="noopener">
+        <div class="outlet"><img src="img/press/semana.png" alt="Semana" loading="lazy" onerror="this.style.display='none'"><b>Semana</b></div>
+        <div class="pt"><span class="en">Learning in times of Artificial Intelligence: how higher education is transforming in Colombia.</span><span class="es" hidden>Aprender en tiempos de Inteligencia Artificial: así se transforma la educación superior en Colombia.</span></div>
+        <div class="pd">15 Aug 2025</div>
+      </a>
+
+      <a class="press-card" href="https://www.portafolio.co/tecnologia/agua-virtual-cada-imagen-de-ia-estilo-ghibli-consume-hasta-5-litros-de-agua-real-627304" target="_blank" rel="noopener">
+        <div class="outlet"><img src="img/press/portafolio.png" alt="Portafolio" loading="lazy" onerror="this.style.display='none'"><b>Portafolio</b></div>
+        <div class="pt"><span class="en">The environmental impact of creating images with AI: how much water does it take?</span><span class="es" hidden>El impacto ambiental que tiene crear imágenes con IA: ¿cuánta agua se requiere?</span></div>
+        <div class="pd">8 Apr 2025</div>
+      </a>
+
+      <a class="press-card" href="https://www.eldiario.com.co/especiales/la-ingenieria-como-motor-de-transformacion-social/" target="_blank" rel="noopener">
+        <div class="outlet"><img src="img/press/eldiario.png" alt="El Diario del Otún" loading="lazy" onerror="this.style.display='none'"><b>El Diario del Otún</b></div>
+        <div class="pt"><span class="en">Engineering as an engine of social transformation.</span><span class="es" hidden>La ingeniería como motor de transformación social.</span></div>
+        <div class="pd">30 Apr 2025</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- TEACHING -->
 <section id="teaching" class="light">
   <div class="wrap">
@@ -500,7 +622,7 @@
           <h4><span class="en">AI, LLMs &amp; machine learning</span><span class="es" hidden>IA, LLMs y machine learning</span></h4>
           <div class="stack">
             <div class="chip"><img src="https://cdn.simpleicons.org/claude" alt="Claude" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">CL</span><span class="nm">Claude</span></div>
-            <div class="chip"><img src="https://api.iconify.design/logos:openai-icon.svg" alt="OpenAI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">AI</span><span class="nm">OpenAI</span></div>
+            <div class="chip"><img src="img/tech/openai.svg" alt="OpenAI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">AI</span><span class="nm">OpenAI</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/pytorch" alt="PyTorch" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">PT</span><span class="nm">PyTorch</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/tensorflow" alt="TensorFlow" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">TF</span><span class="nm">TensorFlow</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/keras" alt="Keras" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">KR</span><span class="nm">Keras</span></div>
@@ -533,7 +655,7 @@
         <div class="skillblock">
           <h4><span class="en">Dev tools</span><span class="es" hidden>Herramientas de desarrollo</span></h4>
           <div class="stack">
-            <div class="chip"><img src="https://api.iconify.design/logos:visual-studio-code.svg" alt="VS Code" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">VS</span><span class="nm">VS Code</span></div>
+            <div class="chip"><img src="img/tech/vscode.svg" alt="VS Code" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">VS</span><span class="nm">VS Code</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/git" alt="Git" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">GT</span><span class="nm">Git</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/github" alt="GitHub" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">GH</span><span class="nm">GitHub</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/jupyter" alt="Jupyter" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">JP</span><span class="nm">Jupyter</span></div>
@@ -566,8 +688,8 @@
             <div class="chip"><img src="https://cdn.simpleicons.org/pandas" alt="pandas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">pd</span><span class="nm">pandas</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/numpy" alt="NumPy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Np</span><span class="nm">NumPy</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/plotly" alt="Plotly" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Pl</span><span class="nm">Plotly</span></div>
-            <div class="chip"><img src="https://api.iconify.design/logos:tableau.svg" alt="Tableau" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Tb</span><span class="nm">Tableau</span></div>
-            <div class="chip"><img src="https://api.iconify.design/logos:microsoft-power-bi.svg" alt="Power BI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">BI</span><span class="nm">Power BI</span></div>
+            <div class="chip"><img src="img/tech/tableau.svg" alt="Tableau" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Tb</span><span class="nm">Tableau</span></div>
+            <div class="chip"><img src="img/tech/powerbi.svg" alt="Power BI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">BI</span><span class="nm">Power BI</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/d3" alt="D3.js" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">D3</span><span class="nm">D3.js</span></div>
           </div>
         </div>
@@ -595,6 +717,50 @@
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section id="certs" class="light">
+  <div class="wrap">
+    <span class="eyebrow"><span class="en">Certifications</span><span class="es" hidden>Certificaciones</span></span>
+    <h2 class="sec-title"><span class="en">Certifications &amp; continuing education</span><span class="es" hidden>Certificaciones y formación continua</span></h2>
+    <p class="sec-lead"><span class="en">Career goal: Machine Learning Engineer. Verified specializations and courses on Coursera.</span><span class="es" hidden>Meta profesional: Ingeniero de Machine Learning. Especializaciones y cursos verificados en Coursera.</span></p>
+    <div class="grid-2" style="align-items:start">
+      <div class="card">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><img src="https://cdn.simpleicons.org/coursera" alt="Coursera" style="width:20px;height:20px" loading="lazy" onerror="this.style.display='none'"><span class="sub" style="margin:0">DeepLearning.AI · Coursera</span></div>
+        <h3><span class="en">Deep Learning Specialization</span><span class="es" hidden>Especialización en Deep Learning</span></h3>
+        <ul class="clean" style="margin-top:10px">
+          <li>Neural Networks and Deep Learning</li>
+          <li>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization &amp; Optimization</li>
+          <li>Structuring Machine Learning Projects</li>
+          <li>Convolutional Neural Networks</li>
+          <li>Sequence Models</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><img src="https://cdn.simpleicons.org/coursera" alt="Coursera" style="width:20px;height:20px" loading="lazy" onerror="this.style.display='none'"><span class="sub" style="margin:0">DeepLearning.AI · Coursera</span></div>
+        <h3><span class="en">Machine Learning Specialization</span><span class="es" hidden>Especialización en Machine Learning</span></h3>
+        <ul class="clean" style="margin-top:10px">
+          <li>Supervised Machine Learning: Regression and Classification</li>
+          <li>Advanced Learning Algorithms</li>
+          <li>Unsupervised Learning, Recommenders, Reinforcement Learning</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><img src="https://cdn.simpleicons.org/coursera" alt="Coursera" style="width:20px;height:20px" loading="lazy" onerror="this.style.display='none'"><span class="sub" style="margin:0">DeepLearning.AI · Coursera</span></div>
+        <h3><span class="en">AI for Medicine</span><span class="es" hidden>IA para Medicina</span></h3>
+        <ul class="clean" style="margin-top:10px">
+          <li>AI for Medical Diagnosis</li>
+          <li>AI for Medical Prognosis</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><img src="https://cdn.simpleicons.org/coursera" alt="Coursera" style="width:20px;height:20px" loading="lazy" onerror="this.style.display='none'"><span class="sub" style="margin:0">University of Pennsylvania · Coursera</span></div>
+        <h3><span class="en">AI in Education: Leveraging ChatGPT for Teaching</span><span class="es" hidden>AI in Education: Leveraging ChatGPT for Teaching</span></h3>
+        <p style="margin-top:8px"><span class="en">Applying generative AI and ChatGPT to university teaching.</span><span class="es" hidden>Aplicación de IA generativa y ChatGPT a la docencia universitaria.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="wrap">
@@ -606,8 +772,8 @@
       <a class="cbox" href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/googlescholar/white" alt="Google Scholar" loading="lazy"><div class="lbl">Google Scholar</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
       <a class="cbox" href="https://orcid.org/0000-0002-5335-0819" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/orcid/white" alt="ORCID" loading="lazy"><div class="lbl">ORCID</div><div class="val">0000-0002-5335-0819</div></a>
       <a class="cbox" href="https://www.researchgate.net/profile/Jorge-Romero-Gelvez" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/researchgate/white" alt="ResearchGate" loading="lazy"><div class="lbl">ResearchGate</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
-      <a class="cbox" href="https://unal.academia.edu/JorgeIvanRomeroGelvez" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/academia/white" alt="Academia.edu" loading="lazy"><div class="lbl">Academia.edu</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
-      <a class="cbox" href="https://www.utadeo.edu.co/es/comunidad/directorio-de-investigadores/297427/jorge-ivan-romero-gelvez" target="_blank" rel="noopener"><img src="img/uni/utadeo.png" alt="Universidad Jorge Tadeo Lozano" loading="lazy"><div class="lbl">Utadeo</div><div class="val"><span class="en">Researcher profile →</span><span class="es" hidden>Perfil de investigador →</span></div></a>
+      <a class="cbox" href="https://www.linkedin.com/search/results/people/?keywords=Jorge%20Iv%C3%A1n%20Romero%20G%C3%A9lvez" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/linkedin/white" alt="LinkedIn" loading="lazy"><div class="lbl">LinkedIn</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
+      <a class="cbox" href="https://www.utadeo.edu.co/es/comunidad/directorio-de-investigadores/297427/jorge-ivan-romero-gelvez" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg><div class="lbl">Utadeo</div><div class="val"><span class="en">Researcher profile →</span><span class="es" hidden>Perfil de investigador →</span></div></a>
       <a class="cbox" href="https://github.com/jorgeiv500" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/github/white" alt="GitHub" loading="lazy"><div class="lbl">GitHub</div><div class="val">@jorgeiv500</div></a>
     </div>
   </div>
