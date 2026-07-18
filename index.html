@@ -126,11 +126,12 @@
   .conf .meta{color:var(--muted);font-size:.85rem;margin-top:4px}
 
   /* LOGOS */
-  .logos{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:center;margin-top:6px}
-  .logos a{display:grid;place-items:center;gap:6px;width:118px;text-align:center}
-  .logos img{height:46px;max-width:112px;object-fit:contain;filter:grayscale(1) contrast(.9) opacity(.7);transition:filter .2s,transform .2s}
-  .logos a:hover img{filter:grayscale(0) opacity(1);transform:translateY(-2px)}
-  .logos .lname{font-size:.72rem;color:var(--muted);line-height:1.2}
+  .logos{display:flex;flex-wrap:wrap;gap:16px;align-items:stretch;justify-content:center;margin-top:20px}
+  .logos a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;width:150px;padding:18px 12px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+  .logos a:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);text-decoration:none}
+  .logos img{height:54px;max-width:124px;object-fit:contain;transition:transform .2s}
+  .logos a:hover img{transform:scale(1.05)}
+  .logos .lname{font-size:.74rem;color:var(--muted);line-height:1.2;font-weight:600}
 
   .contact{background:radial-gradient(900px 400px at 85% -20%,rgba(9,105,218,.16),transparent 60%),linear-gradient(160deg,#0d1117,#010409);color:#e6edf3}
   .contact h2{color:#fff}
@@ -138,6 +139,7 @@
   .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px}
   .cbox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:20px;transition:background .2s,transform .15s}
   .cbox:hover{background:rgba(255,255,255,.11);transform:translateY(-3px);text-decoration:none}
+  .cbox img{width:26px;height:26px;object-fit:contain;margin-bottom:13px;opacity:.95}
   .cbox .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#9a9a9a;margin-bottom:6px}
   .cbox .val{color:#fff;font-weight:600;font-size:.92rem;letter-spacing:-.01em;word-break:break-word}
   footer.foot{background:#010409;color:#8b949e;text-align:center;padding:26px 0;font-size:.85rem}
@@ -277,13 +279,16 @@
   <div class="wrap">
     <span class="eyebrow" style="display:block;text-align:center"><span class="en">Universities where I have taught</span><span class="es" hidden>Universidades donde he enseñado</span></span>
     <div class="logos">
-      <a href="https://www.utadeo.edu.co" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/utadeo.edu.co" alt="Jorge Tadeo Lozano" onerror="this.style.display='none'"><span class="lname">Jorge Tadeo Lozano</span></a>
-      <a href="https://unal.edu.co" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/unal.edu.co" alt="Universidad Nacional" onerror="this.style.display='none'"><span class="lname">Nacional de Colombia</span></a>
-      <a href="https://www.usergioarboleda.edu.co" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/usergioarboleda.edu.co" alt="Sergio Arboleda" onerror="this.style.display='none'"><span class="lname">Sergio Arboleda</span></a>
-      <a href="https://www.udes.edu.co" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/udes.edu.co" alt="UDES" onerror="this.style.display='none'"><span class="lname">Santander (UDES)</span></a>
-      <a href="https://www.usta.edu.co" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/usta.edu.co" alt="Santo Tomás" onerror="this.style.display='none'"><span class="lname">Santo Tomás</span></a>
-      <a href="https://www.ecci.edu.co" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/ecci.edu.co" alt="ECCI" onerror="this.style.display='none'"><span class="lname">ECCI</span></a>
-      <a href="https://urosario.edu.co" target="_blank" rel="noopener"><img src="https://logo.clearbit.com/urosario.edu.co" alt="Universidad del Rosario" onerror="this.style.display='none'"><span class="lname">Del Rosario</span></a>
+      <a href="https://www.utadeo.edu.co" target="_blank" rel="noopener"><img src="img/uni/utadeo.png" alt="Universidad Jorge Tadeo Lozano" loading="lazy"><span class="lname">Jorge Tadeo Lozano</span></a>
+      <a href="https://unal.edu.co" target="_blank" rel="noopener"><img src="img/uni/unal.png" alt="Universidad Nacional de Colombia" loading="lazy"><span class="lname">Nacional de Colombia</span></a>
+      <a href="https://www.usergioarboleda.edu.co" target="_blank" rel="noopener"><img src="img/uni/sergioarboleda.png" alt="Universidad Sergio Arboleda" loading="lazy"><span class="lname">Sergio Arboleda</span></a>
+      <a href="https://www.usta.edu.co" target="_blank" rel="noopener"><img src="img/uni/santotomas.png" alt="Universidad Santo Tomás" loading="lazy"><span class="lname">Santo Tomás</span></a>
+      <a href="https://www.ucentral.edu.co" target="_blank" rel="noopener"><img src="img/uni/central.png" alt="Universidad Central" loading="lazy"><span class="lname">Central</span></a>
+      <a href="https://urosario.edu.co" target="_blank" rel="noopener"><img src="img/uni/rosario.png" alt="Universidad del Rosario" loading="lazy"><span class="lname">Del Rosario</span></a>
+      <a href="https://www.udes.edu.co" target="_blank" rel="noopener"><img src="img/uni/udes.png" alt="Universidad de Santander UDES" loading="lazy"><span class="lname">Santander (UDES)</span></a>
+      <a href="https://www.ecci.edu.co" target="_blank" rel="noopener"><img src="img/uni/ecci.png" alt="Universidad ECCI" loading="lazy"><span class="lname">ECCI</span></a>
+      <a href="https://www.ugc.edu.co" target="_blank" rel="noopener"><img src="img/uni/grancolombia.png" alt="Universidad La Gran Colombia" loading="lazy"><span class="lname">La Gran Colombia</span></a>
+      <a href="https://www.unipiloto.edu.co" target="_blank" rel="noopener"><img src="img/uni/piloto.png" alt="Universidad Piloto de Colombia" loading="lazy"><span class="lname">Piloto de Colombia</span></a>
     </div>
   </div>
 </section>
@@ -472,17 +477,20 @@
             <div class="chip"><img src="https://cdn.simpleicons.org/react" alt="React" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">RE</span><span class="nm">React</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/vercel" alt="Vercel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">▲</span><span class="nm">Vercel</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/supabase" alt="Supabase" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">SB</span><span class="nm">Supabase</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">TW</span><span class="nm">Tailwind CSS</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">ND</span><span class="nm">Node.js</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/streamlit" alt="Streamlit" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">ST</span><span class="nm">Streamlit</span></div>
+            <div class="chip"><img src="img/tech/phaser.png" alt="Phaser" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Ph</span><span class="nm">Phaser</span></div>
           </div>
         </div>
         <div class="skillblock">
-          <h4><span class="en">Dev tools</span><span class="es" hidden>Herramientas de desarrollo</span></h4>
+          <h4><span class="en">Dev tools &amp; CAD design</span><span class="es" hidden>Herramientas de desarrollo y diseño CAD</span></h4>
           <div class="stack">
             <div class="chip"><img src="https://api.iconify.design/logos:visual-studio-code.svg" alt="VS Code" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">VS</span><span class="nm">VS Code</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/git" alt="Git" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">GT</span><span class="nm">Git</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/github" alt="GitHub" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">GH</span><span class="nm">GitHub</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/jupyter" alt="Jupyter" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">JP</span><span class="nm">Jupyter</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/autocad" alt="AutoCAD" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">CAD</span><span class="nm">AutoCAD · CAD</span></div>
           </div>
         </div>
       </div>
@@ -529,13 +537,13 @@
     <h2 class="sec-title"><span class="en">Let's work together</span><span class="es" hidden>Trabajemos juntos</span></h2>
     <p class="sec-lead"><span class="en">Available for academic collaboration, research, consulting and project direction.</span><span class="es" hidden>Disponible para colaboración académica, investigación, consultoría y dirección de proyectos.</span></p>
     <div class="contact-grid">
-      <a class="cbox" href="mailto:jorgeiv500@gmail.com"><div class="lbl">Email</div><div class="val">jorgeiv500@gmail.com</div></a>
-      <a class="cbox" href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener"><div class="lbl">Google Scholar</div><div class="val">x919yLkAAAAJ</div></a>
-      <a class="cbox" href="https://orcid.org/0000-0002-5335-0819" target="_blank" rel="noopener"><div class="lbl">ORCID</div><div class="val">0000-0002-5335-0819</div></a>
-      <a class="cbox" href="https://www.researchgate.net/profile/Jorge-Romero-Gelvez" target="_blank" rel="noopener"><div class="lbl">ResearchGate</div><div class="val">Jorge-Romero-Gelvez</div></a>
-      <a class="cbox" href="https://unal.academia.edu/JorgeIvanRomeroGelvez" target="_blank" rel="noopener"><div class="lbl">Academia.edu</div><div class="val">JorgeIvanRomeroGelvez</div></a>
-      <a class="cbox" href="https://www.utadeo.edu.co/es/comunidad/directorio-de-investigadores/297427/jorge-ivan-romero-gelvez" target="_blank" rel="noopener"><div class="lbl">Utadeo</div><div class="val"><span class="en">Researcher profile</span><span class="es" hidden>Perfil de investigador</span></div></a>
-      <a class="cbox" href="https://github.com/jorgeiv500" target="_blank" rel="noopener"><div class="lbl">GitHub</div><div class="val">@jorgeiv500</div></a>
+      <a class="cbox" href="mailto:jorgeiv500@gmail.com"><img src="https://cdn.simpleicons.org/gmail/white" alt="Email" loading="lazy"><div class="lbl">Email</div><div class="val">jorgeiv500@gmail.com</div></a>
+      <a class="cbox" href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/googlescholar/white" alt="Google Scholar" loading="lazy"><div class="lbl">Google Scholar</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
+      <a class="cbox" href="https://orcid.org/0000-0002-5335-0819" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/orcid/white" alt="ORCID" loading="lazy"><div class="lbl">ORCID</div><div class="val">0000-0002-5335-0819</div></a>
+      <a class="cbox" href="https://www.researchgate.net/profile/Jorge-Romero-Gelvez" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/researchgate/white" alt="ResearchGate" loading="lazy"><div class="lbl">ResearchGate</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
+      <a class="cbox" href="https://unal.academia.edu/JorgeIvanRomeroGelvez" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/academia/white" alt="Academia.edu" loading="lazy"><div class="lbl">Academia.edu</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
+      <a class="cbox" href="https://www.utadeo.edu.co/es/comunidad/directorio-de-investigadores/297427/jorge-ivan-romero-gelvez" target="_blank" rel="noopener"><img src="img/uni/utadeo.png" alt="Universidad Jorge Tadeo Lozano" loading="lazy"><div class="lbl">Utadeo</div><div class="val"><span class="en">Researcher profile →</span><span class="es" hidden>Perfil de investigador →</span></div></a>
+      <a class="cbox" href="https://github.com/jorgeiv500" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/github/white" alt="GitHub" loading="lazy"><div class="lbl">GitHub</div><div class="val">@jorgeiv500</div></a>
     </div>
   </div>
 </section>
