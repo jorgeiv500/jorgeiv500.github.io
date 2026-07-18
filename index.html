@@ -126,12 +126,17 @@
   .conf .meta{color:var(--muted);font-size:.85rem;margin-top:4px}
 
   /* LOGOS */
-  .logos{display:flex;flex-wrap:wrap;gap:16px;align-items:stretch;justify-content:center;margin-top:20px}
-  .logos a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;width:150px;padding:18px 12px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
-  .logos a:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);text-decoration:none}
-  .logos img{height:54px;max-width:124px;object-fit:contain;transition:transform .2s}
-  .logos a:hover img{transform:scale(1.05)}
-  .logos .lname{font-size:.74rem;color:var(--muted);line-height:1.2;font-weight:600}
+  .marquee{overflow:hidden;margin-top:22px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .marquee-track{display:flex;width:max-content;animation:uni-scroll 42s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-group{display:flex;gap:16px;padding-right:16px}
+  @keyframes uni-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .uni-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;width:158px;flex:0 0 158px;padding:18px 12px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+  .uni-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);text-decoration:none}
+  .uni-card img{height:52px;max-width:122px;object-fit:contain;filter:grayscale(1) opacity(.62);transition:filter .25s,transform .2s}
+  .uni-card:hover img{filter:grayscale(0) opacity(1);transform:scale(1.05)}
+  .uni-card .lname{font-size:.74rem;color:var(--muted);line-height:1.2;font-weight:600}
+  @media(prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;justify-content:center}}
 
   .contact{background:radial-gradient(900px 400px at 85% -20%,rgba(9,105,218,.16),transparent 60%),linear-gradient(160deg,#0d1117,#010409);color:#e6edf3}
   .contact h2{color:#fff}
@@ -278,17 +283,33 @@
 <section id="universities" style="padding-top:44px;padding-bottom:44px">
   <div class="wrap">
     <span class="eyebrow" style="display:block;text-align:center"><span class="en">Universities where I have taught</span><span class="es" hidden>Universidades donde he enseñado</span></span>
-    <div class="logos">
-      <a href="https://www.utadeo.edu.co" target="_blank" rel="noopener"><img src="img/uni/utadeo.png" alt="Universidad Jorge Tadeo Lozano" loading="lazy"><span class="lname">Jorge Tadeo Lozano</span></a>
-      <a href="https://unal.edu.co" target="_blank" rel="noopener"><img src="img/uni/unal.png" alt="Universidad Nacional de Colombia" loading="lazy"><span class="lname">Nacional de Colombia</span></a>
-      <a href="https://www.usergioarboleda.edu.co" target="_blank" rel="noopener"><img src="img/uni/sergioarboleda.png" alt="Universidad Sergio Arboleda" loading="lazy"><span class="lname">Sergio Arboleda</span></a>
-      <a href="https://www.usta.edu.co" target="_blank" rel="noopener"><img src="img/uni/santotomas.png" alt="Universidad Santo Tomás" loading="lazy"><span class="lname">Santo Tomás</span></a>
-      <a href="https://www.ucentral.edu.co" target="_blank" rel="noopener"><img src="img/uni/central.png" alt="Universidad Central" loading="lazy"><span class="lname">Central</span></a>
-      <a href="https://urosario.edu.co" target="_blank" rel="noopener"><img src="img/uni/rosario.png" alt="Universidad del Rosario" loading="lazy"><span class="lname">Del Rosario</span></a>
-      <a href="https://www.udes.edu.co" target="_blank" rel="noopener"><img src="img/uni/udes.png" alt="Universidad de Santander UDES" loading="lazy"><span class="lname">Santander (UDES)</span></a>
-      <a href="https://www.ecci.edu.co" target="_blank" rel="noopener"><img src="img/uni/ecci.png" alt="Universidad ECCI" loading="lazy"><span class="lname">ECCI</span></a>
-      <a href="https://www.ugc.edu.co" target="_blank" rel="noopener"><img src="img/uni/grancolombia.png" alt="Universidad La Gran Colombia" loading="lazy"><span class="lname">La Gran Colombia</span></a>
-      <a href="https://www.unipiloto.edu.co" target="_blank" rel="noopener"><img src="img/uni/piloto.png" alt="Universidad Piloto de Colombia" loading="lazy"><span class="lname">Piloto de Colombia</span></a>
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <a class="uni-card" href="https://www.utadeo.edu.co" target="_blank" rel="noopener"><img src="img/uni/utadeo.png" alt="Universidad Jorge Tadeo Lozano" loading="lazy"><span class="lname">Jorge Tadeo Lozano</span></a>
+          <a class="uni-card" href="https://unal.edu.co" target="_blank" rel="noopener"><img src="img/uni/unal.png" alt="Universidad Nacional de Colombia" loading="lazy"><span class="lname">Nacional de Colombia</span></a>
+          <a class="uni-card" href="https://www.usergioarboleda.edu.co" target="_blank" rel="noopener"><img src="img/uni/sergioarboleda.png" alt="Universidad Sergio Arboleda" loading="lazy"><span class="lname">Sergio Arboleda</span></a>
+          <a class="uni-card" href="https://www.usta.edu.co" target="_blank" rel="noopener"><img src="img/uni/santotomas.png" alt="Universidad Santo Tomás" loading="lazy"><span class="lname">Santo Tomás</span></a>
+          <a class="uni-card" href="https://www.ucentral.edu.co" target="_blank" rel="noopener"><img src="img/uni/central.png" alt="Universidad Central" loading="lazy"><span class="lname">Central</span></a>
+          <a class="uni-card" href="https://urosario.edu.co" target="_blank" rel="noopener"><img src="img/uni/rosario.png" alt="Universidad del Rosario" loading="lazy"><span class="lname">Del Rosario</span></a>
+          <a class="uni-card" href="https://www.udes.edu.co" target="_blank" rel="noopener"><img src="img/uni/udes.png" alt="Universidad de Santander UDES" loading="lazy"><span class="lname">Santander (UDES)</span></a>
+          <a class="uni-card" href="https://www.ecci.edu.co" target="_blank" rel="noopener"><img src="img/uni/ecci.png" alt="Universidad ECCI" loading="lazy"><span class="lname">ECCI</span></a>
+          <a class="uni-card" href="https://www.ugc.edu.co" target="_blank" rel="noopener"><img src="img/uni/grancolombia.png" alt="Universidad La Gran Colombia" loading="lazy"><span class="lname">La Gran Colombia</span></a>
+          <a class="uni-card" href="https://www.unipiloto.edu.co" target="_blank" rel="noopener"><img src="img/uni/piloto.png" alt="Universidad Piloto de Colombia" loading="lazy"><span class="lname">Piloto de Colombia</span></a>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <a class="uni-card" href="https://www.utadeo.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/utadeo.png" alt="" loading="lazy"><span class="lname">Jorge Tadeo Lozano</span></a>
+          <a class="uni-card" href="https://unal.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/unal.png" alt="" loading="lazy"><span class="lname">Nacional de Colombia</span></a>
+          <a class="uni-card" href="https://www.usergioarboleda.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/sergioarboleda.png" alt="" loading="lazy"><span class="lname">Sergio Arboleda</span></a>
+          <a class="uni-card" href="https://www.usta.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/santotomas.png" alt="" loading="lazy"><span class="lname">Santo Tomás</span></a>
+          <a class="uni-card" href="https://www.ucentral.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/central.png" alt="" loading="lazy"><span class="lname">Central</span></a>
+          <a class="uni-card" href="https://urosario.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/rosario.png" alt="" loading="lazy"><span class="lname">Del Rosario</span></a>
+          <a class="uni-card" href="https://www.udes.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/udes.png" alt="" loading="lazy"><span class="lname">Santander (UDES)</span></a>
+          <a class="uni-card" href="https://www.ecci.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/ecci.png" alt="" loading="lazy"><span class="lname">ECCI</span></a>
+          <a class="uni-card" href="https://www.ugc.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/grancolombia.png" alt="" loading="lazy"><span class="lname">La Gran Colombia</span></a>
+          <a class="uni-card" href="https://www.unipiloto.edu.co" target="_blank" rel="noopener" tabindex="-1"><img src="img/uni/piloto.png" alt="" loading="lazy"><span class="lname">Piloto de Colombia</span></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -414,9 +435,17 @@
       <div class="conf">
         <div class="cico">🎓</div>
         <div>
-          <h3>EISI 2022 (UDES) · SDEWES Dubrovnik</h3>
-          <div class="role"><span class="en">Scientific committee · Speaker</span><span class="es" hidden>Comité científico · Ponente</span></div>
-          <div class="meta"><span class="en">Scientific committee &amp; workshop facilitator (EISI); participation in the SDEWES series (Dubrovnik).</span><span class="es" hidden>Comité científico y tallerista (EISI); participación en la serie SDEWES (Dubrovnik).</span></div>
+          <h3>EISI 2022 — Universidad de Santander (UDES)</h3>
+          <div class="role"><span class="en">Scientific committee · Workshop facilitator</span><span class="es" hidden>Comité científico · Tallerista</span></div>
+          <div class="meta"><span class="en">Member of the scientific committee and workshop facilitator. 2022.</span><span class="es" hidden>Integrante del comité científico y tallerista. 2022.</span></div>
+        </div>
+      </div>
+      <div class="conf">
+        <div class="cico">🌊</div>
+        <div>
+          <h3>SDEWES Conference — Dubrovnik</h3>
+          <div class="role"><span class="en">Speaker · Participant</span><span class="es" hidden>Ponente · Participante</span></div>
+          <div class="meta"><span class="en">Participation in the international SDEWES series (Dubrovnik, Croatia).</span><span class="es" hidden>Participación en la serie internacional SDEWES (Dubrovnik, Croacia).</span></div>
         </div>
       </div>
     </div>
