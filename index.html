@@ -6,9 +6,49 @@
 <title>Jorge Iván Romero Gélvez, Ph.D. — Industrial Engineering · AI · Optimization · Data Science</title>
 <meta name="description" content="Personal site of Jorge Iván Romero Gélvez, Ph.D. Director of the Academic Area of Industries and Digital Technologies, Universidad Jorge Tadeo Lozano. Research in artificial intelligence, optimization, multi-criteria decision making, simulation and machine learning.">
 <meta name="author" content="Jorge Iván Romero Gélvez">
+<link rel="canonical" href="https://jorgeiv500.github.io/">
+<meta name="theme-color" content="#0d1117">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d1117'/%3E%3Ctext x='50' y='69' font-size='52' font-family='Arial,Helvetica,sans-serif' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EJR%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://jorgeiv500.github.io/">
+<meta property="og:site_name" content="Jorge Iván Romero Gélvez, Ph.D.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_CO">
 <meta property="og:title" content="Jorge Iván Romero Gélvez, Ph.D.">
 <meta property="og:description" content="Industrial Engineering · Artificial Intelligence · Optimization · Multi-criteria decision making · Data Science">
+<meta property="og:image" content="https://jorgeiv500.github.io/foto.jpg">
+<meta property="og:image:alt" content="Jorge Iván Romero Gélvez, Ph.D.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jorge Iván Romero Gélvez, Ph.D.">
+<meta name="twitter:description" content="Industrial Engineering · Artificial Intelligence · Optimization · Data Science">
+<meta name="twitter:image" content="https://jorgeiv500.github.io/foto.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jorge Iván Romero Gélvez",
+  "givenName": "Jorge Iván",
+  "familyName": "Romero Gélvez",
+  "honorificSuffix": "Ph.D.",
+  "jobTitle": "Director, Academic Area of Industries & Digital Technologies",
+  "worksFor": { "@type": "CollegeOrUniversity", "name": "Universidad de Bogotá Jorge Tadeo Lozano" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Universidad Nacional de Colombia" },
+    { "@type": "CollegeOrUniversity", "name": "Universitat Politècnica de València" }
+  ],
+  "url": "https://jorgeiv500.github.io/",
+  "image": "https://jorgeiv500.github.io/foto.jpg",
+  "email": "mailto:jorgeiv500@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" },
+  "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Operations Research", "Multi-criteria Decision Making", "Optimization", "Systems Simulation", "Data Science"],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en",
+    "https://orcid.org/0000-0002-5335-0819",
+    "https://www.researchgate.net/profile/Jorge-Romero-Gelvez",
+    "https://github.com/jorgeiv500"
+  ]
+}
+</script>
 <style>
   :root{
     --black:#0c0c0c;--ink:#1c1c1c;--muted:#6e6e6e;--line:#e4e4e4;--bg:#f5f5f5;
@@ -24,6 +64,9 @@
   h1,h2,h3{font-family:'Liberation Sans',Arial,'Helvetica Neue',Helvetica,sans-serif;line-height:1.15;color:var(--black)}
   a{color:var(--gh-blue);text-decoration:none}
   a:hover{text-decoration:underline}
+  :focus-visible{outline:2px solid var(--gh-green);outline-offset:3px;border-radius:4px}
+  .skip-link{position:fixed;top:-60px;left:12px;z-index:200;background:var(--gh-dark);color:#fff;padding:10px 16px;border-radius:8px;font-weight:600;transition:top .15s}
+  .skip-link:focus{top:12px;text-decoration:none}
   .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
   section{padding:66px 0}
   .eyebrow{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-bottom:12px}
@@ -101,7 +144,8 @@
   .stack{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:11px}
   .chip{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s,border-color .15s}
   .chip:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:#cfcfcf}
-  .chip img{width:22px;height:22px;object-fit:contain;flex:0 0 22px}
+  .chip img{width:22px;height:22px;object-fit:contain;flex:0 0 22px;filter:grayscale(1);opacity:.72;transition:filter .2s,opacity .2s}
+  .chip:hover img{filter:grayscale(0);opacity:1}
   .chip .fallback{width:22px;height:22px;flex:0 0 22px;border-radius:6px;background:var(--gh-dark-2);color:#fff;display:none;place-items:center;font-size:.7rem;font-weight:700}
   .chip span.nm{font-weight:600;font-size:.85rem;color:var(--ink);line-height:1.15}
   .light{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -144,7 +188,7 @@
   .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px}
   .cbox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:20px;transition:background .2s,transform .15s}
   .cbox:hover{background:rgba(255,255,255,.11);transform:translateY(-3px);text-decoration:none}
-  .cbox img{width:26px;height:26px;object-fit:contain;margin-bottom:13px;opacity:.95}
+  .cbox img{width:26px;height:26px;object-fit:contain;margin-bottom:13px;opacity:.95;filter:brightness(0) invert(1)}
   .cbox .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#9a9a9a;margin-bottom:6px}
   .cbox .val{color:#fff;font-weight:600;font-size:.92rem;letter-spacing:-.01em;word-break:break-word}
   footer.foot{background:#010409;color:#8b949e;text-align:center;padding:26px 0;font-size:.85rem}
@@ -174,13 +218,16 @@
   .press-card{scroll-snap-align:start;flex:0 0 300px;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gh-green);border-radius:14px;padding:18px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
   .press-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);text-decoration:none}
   .press-card .outlet{display:flex;align-items:center;gap:9px;margin-bottom:11px}
-  .press-card .outlet img{width:22px;height:22px;object-fit:contain;border-radius:5px}
+  .press-card .outlet img{width:22px;height:22px;object-fit:contain;border-radius:5px;filter:grayscale(1);opacity:.75;transition:filter .2s,opacity .2s}
+  .press-card:hover .outlet img{filter:grayscale(0);opacity:1}
   .press-card .outlet b{font-size:.8rem;color:var(--gh-green-d);text-transform:uppercase;letter-spacing:.04em}
   .press-card .pt{color:var(--ink);font-weight:600;font-size:.97rem;line-height:1.34;margin-bottom:12px}
   .press-card .pd{color:var(--muted);font-size:.82rem;margin-top:auto}
 </style>
 </head>
 <body class="lang-en">
+
+<a class="skip-link" href="#about"><span class="en">Skip to content</span><span class="es" hidden>Saltar al contenido</span></a>
 
 <header class="nav">
   <div class="wrap nav-inner">
@@ -191,7 +238,6 @@
         <a href="#experience"><span class="en">Experience</span><span class="es" hidden>Trayectoria</span></a>
         <a href="#research"><span class="en">Research</span><span class="es" hidden>Investigación</span></a>
         <a href="#conferences"><span class="en">Conferences</span><span class="es" hidden>Conferencias</span></a>
-        <a href="#projects"><span class="en">Projects</span><span class="es" hidden>Proyectos</span></a>
         <a href="#media"><span class="en">Media</span><span class="es" hidden>Medios</span></a>
         <a href="#teaching"><span class="en">Teaching</span><span class="es" hidden>Docencia</span></a>
         <a href="#contact"><span class="en">Contact</span><span class="es" hidden>Contacto</span></a>
@@ -394,7 +440,7 @@
           <div class="t">Enhancing Workplace Safety through Automated Personal Protective Equipment Detection</div>
           <div class="m"><em>ICAI Workshops (WDEA)</em> · 2024 · <span class="en">Deep learning · computer vision</span><span class="es" hidden>Deep learning · visión por computador</span></div>
         </a>
-        <p style="color:var(--muted);font-size:.9rem;margin-top:6px"><span class="en">Metrics as of Google Scholar: 170+ citations, h-index 7, i10-index 6. Full list on </span><span class="es" hidden>Métricas según Google Scholar: 170+ citas, índice h 7, índice i10 6. Lista completa en </span><a href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://orcid.org/0000-0002-5335-0819" target="_blank" rel="noopener">ORCID</a> &amp; <a href="https://www.researchgate.net/profile/Jorge-Romero-Gelvez" target="_blank" rel="noopener">ResearchGate</a>.</p>
+        <p style="color:var(--muted);font-size:.9rem;margin-top:6px"><span class="en">Metrics from Google Scholar (updated 2026): 170+ citations, h-index 7, i10-index 6. Full list on </span><span class="es" hidden>Métricas de Google Scholar (actualizadas 2026): 170+ citas, índice h 7, índice i10 6. Lista completa en </span><a href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://orcid.org/0000-0002-5335-0819" target="_blank" rel="noopener">ORCID</a> &amp; <a href="https://www.researchgate.net/profile/Jorge-Romero-Gelvez" target="_blank" rel="noopener">ResearchGate</a>.</p>
       </div>
 
       <div>
@@ -491,60 +537,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="light">
-  <div class="wrap">
-    <span class="eyebrow"><span class="en">Projects</span><span class="es" hidden>Proyectos</span></span>
-    <h2 class="sec-title"><span class="en">Deployed projects</span><span class="es" hidden>Proyectos desplegados</span></h2>
-    <p class="sec-lead"><span class="en">Live apps built with Next.js, LLM APIs, Supabase, Phaser and computer vision — deployed on Vercel.</span><span class="es" hidden>Apps en vivo hechas con Next.js, APIs de LLM, Supabase, Phaser y visión por computador — desplegadas en Vercel.</span></p>
-    <div class="proj-grid">
-
-      <div class="proj">
-        <div class="ptop"><div class="picon">🎮</div><h3><span class="en">Misión Tadeo — CV game</span><span class="es" hidden>Misión Tadeo — juego con visión</span></h3></div>
-        <p><span class="en">Utadeo induction game with computer-vision control (MediaPipe), gamepad support and pixel art.</span><span class="es" hidden>Juego de inducción de Utadeo con control por visión por computador (MediaPipe), soporte de gamepad y pixel art.</span></p>
-        <div class="ptags"><span class="ptag">Next.js</span><span class="ptag">Phaser</span><span class="ptag">Tailwind</span><span class="ptag">MediaPipe</span><span class="ptag">Pixel art</span></div>
-        <div class="plinks"><a href="https://github.com/jorgeiv500/juego-cv-induccion" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
-
-      <div class="proj">
-        <div class="ptop"><div class="picon">🤖</div><h3><span class="en">Utadeo Chatbot (OpenAI + Supabase)</span><span class="es" hidden>Chatbot Utadeo (OpenAI + Supabase)</span></h3></div>
-        <p><span class="en">Conversational assistant powered by the OpenAI API with a Supabase vector backend (RAG).</span><span class="es" hidden>Asistente conversacional con la API de OpenAI y backend vectorial en Supabase (RAG).</span></p>
-        <div class="ptags"><span class="ptag">OpenAI API</span><span class="ptag">Supabase</span><span class="ptag">Next.js</span><span class="ptag">RAG</span></div>
-        <div class="plinks"><a class="live badge-live" href="https://utadeo-chatbot-openai-supabase.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/utadeo-chatbot-openai-supabase" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
-
-      <div class="proj">
-        <div class="ptop"><div class="picon">💬</div><h3><span class="en">Fair chatbot (APIs)</span><span class="es" hidden>Chatbot de feria (APIs)</span></h3></div>
-        <p><span class="en">LLM-API chatbot built for academic fairs and program promotion.</span><span class="es" hidden>Chatbot con APIs de LLM creado para ferias académicas y promoción de programas.</span></p>
-        <div class="ptags"><span class="ptag">LLM API</span><span class="ptag">Next.js</span><span class="ptag">Chatbot</span></div>
-        <div class="plinks"><a class="live badge-live" href="https://chat-feria.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/my-chatbot" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
-
-      <div class="proj">
-        <div class="ptop"><div class="picon">🧮</div><h3>Tadeobot — <span class="en">Precalculus assistant</span><span class="es" hidden>asistente de precálculo</span></h3></div>
-        <p><span class="en">LLM tutoring assistant for precalculus, with guided step-by-step help.</span><span class="es" hidden>Asistente tutor con LLM para precálculo, con ayuda guiada paso a paso.</span></p>
-        <div class="ptags"><span class="ptag">LLM</span><span class="ptag">Next.js</span><span class="ptag">Education</span></div>
-        <div class="plinks"><a class="live badge-live" href="https://precalculo-assistant-app.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/tadeobot" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
-
-      <div class="proj">
-        <div class="ptop"><div class="picon">🧑‍🏫</div><h3><span class="en">GenAI diagnosis for faculty</span><span class="es" hidden>Diagnóstico de IA generativa docente</span></h3></div>
-        <p><span class="en">Web tool to diagnose generative-AI adoption and skills among university teachers.</span><span class="es" hidden>Herramienta web para diagnosticar la adopción y competencias en IA generativa del profesorado.</span></p>
-        <div class="ptags"><span class="ptag">Next.js</span><span class="ptag">Generative AI</span><span class="ptag">Survey</span></div>
-        <div class="plinks"><a class="live badge-live" href="https://diagnostico-ia-generativa-docentes.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/diagnostico-ia-generativa-docentes" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
-
-      <div class="proj">
-        <div class="ptop"><div class="picon">📊</div><h3>Utadeo Dashboard</h3></div>
-        <p><span class="en">Interactive analytics dashboard for institutional data and indicators.</span><span class="es" hidden>Tablero analítico interactivo para datos e indicadores institucionales.</span></p>
-        <div class="ptags"><span class="ptag">Next.js</span><span class="ptag">Dashboards</span><span class="ptag">Data viz</span></div>
-        <div class="plinks"><a class="live badge-live" href="https://utadeo-dashboard.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/jorgeiv500/utadeo-dashboard" target="_blank" rel="noopener">GitHub →</a></div>
-      </div>
-
-    </div>
-    <p style="color:var(--muted);font-size:.9rem;margin-top:18px"><span class="en">More repositories on </span><span class="es" hidden>Más repositorios en </span><a href="https://github.com/jorgeiv500?tab=repositories" target="_blank" rel="noopener">github.com/jorgeiv500</a>.</p>
-  </div>
-</section>
 
 <!-- IN THE MEDIA -->
 <section id="media">
@@ -685,6 +677,7 @@
         <div class="skillblock">
           <h4><span class="en">Data &amp; visualization</span><span class="es" hidden>Datos y visualización</span></h4>
           <div class="stack">
+            <div class="chip"><img src="img/tech/sqlserver.svg" alt="SQL Server" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">SQL</span><span class="nm">SQL Server</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/pandas" alt="pandas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">pd</span><span class="nm">pandas</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/numpy" alt="NumPy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Np</span><span class="nm">NumPy</span></div>
             <div class="chip"><img src="https://cdn.simpleicons.org/plotly" alt="Plotly" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Pl</span><span class="nm">Plotly</span></div>
@@ -722,10 +715,9 @@
   <div class="wrap">
     <span class="eyebrow"><span class="en">Certifications</span><span class="es" hidden>Certificaciones</span></span>
     <h2 class="sec-title"><span class="en">Certifications &amp; continuing education</span><span class="es" hidden>Certificaciones y formación continua</span></h2>
-    <p class="sec-lead"><span class="en">Career goal: Machine Learning Engineer. Verified specializations and courses on Coursera.</span><span class="es" hidden>Meta profesional: Ingeniero de Machine Learning. Especializaciones y cursos verificados en Coursera.</span></p>
     <div class="grid-2" style="align-items:start">
       <div class="card">
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><img src="https://cdn.simpleicons.org/coursera" alt="Coursera" style="width:20px;height:20px" loading="lazy" onerror="this.style.display='none'"><span class="sub" style="margin:0">DeepLearning.AI · Coursera</span></div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 20px" aria-label="DeepLearning.AI"><rect width="24" height="24" rx="5" fill="#0a2540"/><g stroke="#4aa3ff" stroke-width="1"><line x1="6" y1="7" x2="12" y2="12"/><line x1="6" y1="17" x2="12" y2="12"/><line x1="18" y1="7" x2="12" y2="12"/><line x1="18" y1="17" x2="12" y2="12"/></g><g fill="#fff"><circle cx="6" cy="7" r="1.7"/><circle cx="6" cy="17" r="1.7"/><circle cx="12" cy="12" r="1.9"/><circle cx="18" cy="7" r="1.7"/><circle cx="18" cy="17" r="1.7"/></g></svg><span class="sub" style="margin:0">DeepLearning.AI · Coursera</span></div>
         <h3><span class="en">Deep Learning Specialization</span><span class="es" hidden>Especialización en Deep Learning</span></h3>
         <ul class="clean" style="margin-top:10px">
           <li>Neural Networks and Deep Learning</li>
@@ -736,7 +728,7 @@
         </ul>
       </div>
       <div class="card">
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><img src="https://cdn.simpleicons.org/coursera" alt="Coursera" style="width:20px;height:20px" loading="lazy" onerror="this.style.display='none'"><span class="sub" style="margin:0">DeepLearning.AI · Coursera</span></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 20px" aria-label="DeepLearning.AI"><rect width="24" height="24" rx="5" fill="#0a2540"/><g stroke="#4aa3ff" stroke-width="1"><line x1="6" y1="7" x2="12" y2="12"/><line x1="6" y1="17" x2="12" y2="12"/><line x1="18" y1="7" x2="12" y2="12"/><line x1="18" y1="17" x2="12" y2="12"/></g><g fill="#fff"><circle cx="6" cy="7" r="1.7"/><circle cx="6" cy="17" r="1.7"/><circle cx="12" cy="12" r="1.9"/><circle cx="18" cy="7" r="1.7"/><circle cx="18" cy="17" r="1.7"/></g></svg><svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 20px" aria-label="Stanford"><rect width="24" height="24" rx="5" fill="#8C1515"/><text x="12" y="17" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="14" font-weight="700" fill="#fff">S</text></svg><span class="sub" style="margin:0">DeepLearning.AI · Stanford · Coursera</span></div>
         <h3><span class="en">Machine Learning Specialization</span><span class="es" hidden>Especialización en Machine Learning</span></h3>
         <ul class="clean" style="margin-top:10px">
           <li>Supervised Machine Learning: Regression and Classification</li>
@@ -745,7 +737,7 @@
         </ul>
       </div>
       <div class="card">
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><img src="https://cdn.simpleicons.org/coursera" alt="Coursera" style="width:20px;height:20px" loading="lazy" onerror="this.style.display='none'"><span class="sub" style="margin:0">DeepLearning.AI · Coursera</span></div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 20px" aria-label="DeepLearning.AI"><rect width="24" height="24" rx="5" fill="#0a2540"/><g stroke="#4aa3ff" stroke-width="1"><line x1="6" y1="7" x2="12" y2="12"/><line x1="6" y1="17" x2="12" y2="12"/><line x1="18" y1="7" x2="12" y2="12"/><line x1="18" y1="17" x2="12" y2="12"/></g><g fill="#fff"><circle cx="6" cy="7" r="1.7"/><circle cx="6" cy="17" r="1.7"/><circle cx="12" cy="12" r="1.9"/><circle cx="18" cy="7" r="1.7"/><circle cx="18" cy="17" r="1.7"/></g></svg><span class="sub" style="margin:0">DeepLearning.AI · Coursera</span></div>
         <h3><span class="en">AI for Medicine</span><span class="es" hidden>IA para Medicina</span></h3>
         <ul class="clean" style="margin-top:10px">
           <li>AI for Medical Diagnosis</li>
@@ -753,7 +745,7 @@
         </ul>
       </div>
       <div class="card">
-        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><img src="https://cdn.simpleicons.org/coursera" alt="Coursera" style="width:20px;height:20px" loading="lazy" onerror="this.style.display='none'"><span class="sub" style="margin:0">University of Pennsylvania · Coursera</span></div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:8px"><svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 20px" aria-label="University of Pennsylvania"><rect width="24" height="24" rx="5" fill="#011F5B"/><text x="12" y="17" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="14" font-weight="700" fill="#fff">P</text></svg><span class="sub" style="margin:0">University of Pennsylvania · Coursera</span></div>
         <h3><span class="en">AI in Education: Leveraging ChatGPT for Teaching</span><span class="es" hidden>AI in Education: Leveraging ChatGPT for Teaching</span></h3>
         <p style="margin-top:8px"><span class="en">Applying generative AI and ChatGPT to university teaching.</span><span class="es" hidden>Aplicación de IA generativa y ChatGPT a la docencia universitaria.</span></p>
       </div>
@@ -772,7 +764,7 @@
       <a class="cbox" href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/googlescholar/white" alt="Google Scholar" loading="lazy"><div class="lbl">Google Scholar</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
       <a class="cbox" href="https://orcid.org/0000-0002-5335-0819" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/orcid/white" alt="ORCID" loading="lazy"><div class="lbl">ORCID</div><div class="val">0000-0002-5335-0819</div></a>
       <a class="cbox" href="https://www.researchgate.net/profile/Jorge-Romero-Gelvez" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/researchgate/white" alt="ResearchGate" loading="lazy"><div class="lbl">ResearchGate</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
-      <a class="cbox" href="https://www.linkedin.com/search/results/people/?keywords=Jorge%20Iv%C3%A1n%20Romero%20G%C3%A9lvez" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/linkedin/white" alt="LinkedIn" loading="lazy"><div class="lbl">LinkedIn</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
+      <a class="cbox" href="https://www.linkedin.com/search/results/people/?keywords=Jorge%20Iv%C3%A1n%20Romero%20G%C3%A9lvez" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#fff" aria-label="LinkedIn"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg><div class="lbl">LinkedIn</div><div class="val"><span class="en">View profile →</span><span class="es" hidden>Ver perfil →</span></div></a>
       <a class="cbox" href="https://www.utadeo.edu.co/es/comunidad/directorio-de-investigadores/297427/jorge-ivan-romero-gelvez" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg><div class="lbl">Utadeo</div><div class="val"><span class="en">Researcher profile →</span><span class="es" hidden>Perfil de investigador →</span></div></a>
       <a class="cbox" href="https://github.com/jorgeiv500" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/github/white" alt="GitHub" loading="lazy"><div class="lbl">GitHub</div><div class="val">@jorgeiv500</div></a>
     </div>
