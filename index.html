@@ -94,8 +94,16 @@
 
   .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
   .tag{background:#f0f0f0;color:#333;border:1px solid #e2e2e2;padding:6px 13px;border-radius:999px;font-size:.83rem;font-weight:600}
-  .skillblock{margin-bottom:18px}
-  .skillblock h4{color:var(--black);font-size:.96rem;margin-bottom:9px;font-weight:700}
+  .skillblock{margin-bottom:22px}
+  .skillblock h4{color:var(--black);font-size:.96rem;margin-bottom:11px;font-weight:700}
+
+  /* TECH STACK (logos) */
+  .stack{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:11px}
+  .chip{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s,border-color .15s}
+  .chip:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:#cfcfcf}
+  .chip img{width:22px;height:22px;object-fit:contain;flex:0 0 22px}
+  .chip .fallback{width:22px;height:22px;flex:0 0 22px;border-radius:6px;background:var(--gh-dark-2);color:#fff;display:none;place-items:center;font-size:.7rem;font-weight:700}
+  .chip span.nm{font-weight:600;font-size:.85rem;color:var(--ink);line-height:1.15}
   .light{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
   ul.clean{list-style:none}
@@ -166,8 +174,8 @@
       <div class="role en">Director · Academic Area of Industries &amp; Digital Technologies</div>
       <div class="role es" hidden>Director · Área Académica de Industrias y Tecnologías Digitales</div>
       <div class="org">Universidad de Bogotá Jorge Tadeo Lozano</div>
-      <p class="bio en">Industrial Engineer and Doctor of Engineering. Researcher and professor with over a decade of experience in optimization, operations research, systems simulation and multi-criteria decision making — today focused on <b style="color:#fff">artificial intelligence</b>: machine learning, deep learning, generative AI and large language models applied to industrial, energy and public-sector decisions.</p>
-      <p class="bio es" hidden>Ingeniero Industrial y Doctor en Ingeniería. Investigador y profesor con más de una década de experiencia en optimización, investigación de operaciones, simulación y toma de decisiones multicriterio — hoy enfocado en <b style="color:#fff">inteligencia artificial</b>: machine learning, deep learning, IA generativa y grandes modelos de lenguaje aplicados a decisiones industriales, energéticas y del sector público.</p>
+      <p class="bio en">Industrial Engineer and Doctor of Engineering. Researcher and professor with over a decade of experience in optimization, operations research, systems simulation and multi-criteria decision making — today focused on <b style="color:#fff">artificial intelligence</b>: machine learning, deep learning, generative AI and large language models applied to industrial, energy and public-sector decisions. I currently teach <b style="color:#fff">Artificial Intelligence</b> at undergraduate level and <b style="color:#fff">Deep Learning</b> in graduate programs.</p>
+      <p class="bio es" hidden>Ingeniero Industrial y Doctor en Ingeniería. Investigador y profesor con más de una década de experiencia en optimización, investigación de operaciones, simulación y toma de decisiones multicriterio — hoy enfocado en <b style="color:#fff">inteligencia artificial</b>: machine learning, deep learning, IA generativa y grandes modelos de lenguaje aplicados a decisiones industriales, energéticas y del sector público. Actualmente enseño <b style="color:#fff">Inteligencia Artificial</b> en pregrado y <b style="color:#fff">Aprendizaje Profundo</b> en posgrado.</p>
       <div class="cta">
         <a class="btn btn-primary" href="mailto:jorgeiv500@gmail.com">
           <svg class="ico" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>
@@ -188,9 +196,9 @@
 <div class="stats">
   <div class="wrap stats-inner">
     <div class="stat"><b>Ph.D.</b><span class="en">Engineering · UNAL</span><span class="es" hidden>Ingeniería · UNAL</span></div>
-    <div class="stat"><b>12+</b><span class="en">years teaching</span><span class="es" hidden>años de docencia</span></div>
+    <div class="stat"><b>170+</b><span class="en">citations · Scholar</span><span class="es" hidden>citas · Scholar</span></div>
+    <div class="stat"><b>h·7</b><span class="en">h-index (i10: 6)</span><span class="es" hidden>índice h (i10: 6)</span></div>
     <div class="stat"><b>60+</b><span class="en">theses supervised</span><span class="es" hidden>tesis dirigidas</span></div>
-    <div class="stat"><b>8</b><span class="en">WDEA editions co-organized</span><span class="es" hidden>ediciones WDEA co-organizadas</span></div>
   </div>
 </div>
 
@@ -289,12 +297,12 @@
     <div class="tags" style="margin-bottom:26px">
       <span class="tag">Artificial Intelligence</span>
       <span class="tag">Machine &amp; Deep Learning</span>
+      <span class="tag">Graph Neural Networks</span>
       <span class="tag">Generative AI · LLMs</span>
       <span class="tag">Multi-criteria decision making (MCDM)</span>
-      <span class="tag">Optimization</span>
-      <span class="tag">Metaheuristics</span>
-      <span class="tag">Systems simulation</span>
-      <span class="tag">Energy systems</span>
+      <span class="tag">Optimization &amp; metaheuristics</span>
+      <span class="tag">System dynamics &amp; simulation</span>
+      <span class="tag">EV charging &amp; energy transition</span>
       <span class="tag">Operations research</span>
     </div>
 
@@ -302,31 +310,35 @@
       <div>
         <h4 style="font-family:'Liberation Sans',Arial,'Helvetica Neue',Helvetica,sans-serif;color:var(--black);margin-bottom:12px"><span class="en">Selected publications &amp; reports</span><span class="es" hidden>Publicaciones y reportes seleccionados</span></h4>
 
+        <a class="pub" href="https://doi.org/10.3390/en19081981" target="_blank" rel="noopener">
+          <div class="t">Graph Neural Networks and Bi-Level Optimization for Equitable Electric Vehicle Charging Infrastructure Planning</div>
+          <div class="m"><em>Energies</em> · 2026 · MDPI</div>
+        </a>
+        <a class="pub" href="https://doi.org/10.3390/wevj16070345" target="_blank" rel="noopener">
+          <div class="t">Optimization and Trends in EV Charging Infrastructure: A PCA-Based Systematic Review</div>
+          <div class="m"><em>World Electric Vehicle Journal</em> · 2025 · MDPI · <span class="en">47 citations</span><span class="es" hidden>47 citas</span></div>
+        </a>
+        <a class="pub" href="https://doi.org/10.1177/01445987241277917" target="_blank" rel="noopener">
+          <div class="t">Assessing the diffusion of photovoltaic technology and electric vehicles using system dynamics</div>
+          <div class="m"><em>Energy Exploration &amp; Exploitation</em> · 2024 · SAGE · <span class="en">10 citations</span><span class="es" hidden>10 citas</span></div>
+        </a>
+        <a class="pub" href="https://doi.org/10.1142/S0219622016400034" target="_blank" rel="noopener">
+          <div class="t">Influence Analysis in Consensus Search — A Multi-Criteria Group Decision Making Approach in Environmental Management</div>
+          <div class="m"><em>Int. Journal of Information Technology &amp; Decision Making</em> · 2016 · <span class="en">23 citations</span><span class="es" hidden>23 citas</span></div>
+        </a>
+        <a class="pub" href="https://doi.org/10.15446/dyna.v82n191.42966" target="_blank" rel="noopener">
+          <div class="t">Compromise Solutions in Mining Method Selection — Case Study in Colombian Coal Mining</div>
+          <div class="m"><em>DYNA</em> · 2015 · Universidad Nacional de Colombia · <span class="en">13 citations</span><span class="es" hidden>13 citas</span></div>
+        </a>
         <a class="pub" href="https://www.researchgate.net/publication/279443458" target="_blank" rel="noopener">
           <div class="t">Mining Method Selection Methodology by Multiple Criteria Decision Analysis — Case Study in Colombian Coal Mining</div>
-          <div class="m"><em>Multi-criteria decision analysis</em> · ResearchGate</div>
+          <div class="m"><em>Int. Symposium on the Analytic Hierarchy Process (ISAHP)</em> · 2014 · <span class="en">40 citations</span><span class="es" hidden>40 citas</span></div>
         </a>
-        <a class="pub" href="https://www.researchgate.net/publication/304033942" target="_blank" rel="noopener">
-          <div class="t">Influence Analysis in Consensus Search — A Multi-Criteria Group Decision Making Approach in Environmental Management</div>
-          <div class="m"><em>MCGDM · Environmental management</em> · ResearchGate</div>
+        <a class="pub" href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener">
+          <div class="t">Enhancing Workplace Safety through Automated Personal Protective Equipment Detection</div>
+          <div class="m"><em>ICAI Workshops (WDEA)</em> · 2024 · <span class="en">Deep learning · computer vision</span><span class="es" hidden>Deep learning · visión por computador</span></div>
         </a>
-        <a class="pub" href="https://www.researchgate.net/publication/312348804" target="_blank" rel="noopener">
-          <div class="t">Modelo de decisión multicriterio difuso para la selección de contratistas en proyectos de infraestructura: caso Colombia</div>
-          <div class="m"><em>Fuzzy MCDM</em> · ResearchGate</div>
-        </a>
-        <a class="pub" href="https://www.sdewes.org/jsdewes/pid11.0466" target="_blank" rel="noopener">
-          <div class="t">Energy Evaluation of Pumping Systems in a Clean Water Plant: A Study Case</div>
-          <div class="m"><em>J. SDEWES</em> · Energy &amp; water systems</div>
-        </a>
-        <a class="pub" href="https://bdigital.upme.gov.co/handle/001/1128" target="_blank" rel="noopener">
-          <div class="t">Consultoría de apoyo para dimensionar un plan nacional de ordenamiento minero</div>
-          <div class="m"><em>UPME</em> · 2012 · <span class="en">Technical report</span><span class="es" hidden>Informe técnico</span></div>
-        </a>
-        <a class="pub" href="https://bdigital.upme.gov.co/handle/001/998" target="_blank" rel="noopener">
-          <div class="t">Apoyo a la UPME en el análisis de los elementos de política y planes mineros vigentes</div>
-          <div class="m"><em>UPME</em> · 2011 · <span class="en">Technical report</span><span class="es" hidden>Informe técnico</span></div>
-        </a>
-        <p style="color:var(--muted);font-size:.9rem;margin-top:6px"><span class="en">Full list on </span><span class="es" hidden>Lista completa en </span><a href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://orcid.org/0000-0002-5335-0819" target="_blank" rel="noopener">ORCID</a> &amp; <a href="https://www.researchgate.net/profile/Jorge-Romero-Gelvez" target="_blank" rel="noopener">ResearchGate</a>.</p>
+        <p style="color:var(--muted);font-size:.9rem;margin-top:6px"><span class="en">Metrics as of Google Scholar: 170+ citations, h-index 7, i10-index 6. Full list on </span><span class="es" hidden>Métricas según Google Scholar: 170+ citas, índice h 7, índice i10 6. Lista completa en </span><a href="https://scholar.google.com/citations?user=x919yLkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://orcid.org/0000-0002-5335-0819" target="_blank" rel="noopener">ORCID</a> &amp; <a href="https://www.researchgate.net/profile/Jorge-Romero-Gelvez" target="_blank" rel="noopener">ResearchGate</a>.</p>
       </div>
 
       <div>
@@ -424,46 +436,86 @@
         <p><span class="en">Production Systems, Logistics &amp; supply chain, Mathematical models of production and operations, Systems Simulation.</span><span class="es" hidden>Sistemas de Producción, Logística y cadena de suministro, Modelos matemáticos de producción y operaciones, Simulación de sistemas.</span></p>
       </div>
       <div class="card">
-        <h3><span class="en">Data &amp; AI</span><span class="es" hidden>Datos e IA</span></h3>
-        <div class="sub"><span class="en">Undergraduate</span><span class="es" hidden>Pregrado</span></div>
-        <p><span class="en">Advanced Data Analysis, Data Visualization &amp; Data Analysis (course built from scratch) and Information Systems — with Python, Tableau and Excel.</span><span class="es" hidden>Análisis Avanzado de Datos, Data Visualization &amp; Data Analysis (curso creado desde cero) y Sistemas de Información — con Python, Tableau y Excel.</span></p>
+        <h3><span class="en">AI &amp; Deep Learning</span><span class="es" hidden>IA y Aprendizaje Profundo</span></h3>
+        <div class="sub"><span class="en">Undergraduate · Graduate</span><span class="es" hidden>Pregrado · Posgrado</span></div>
+        <p><span class="en">Artificial Intelligence (undergraduate) and Deep Learning (graduate). Also Advanced Data Analysis and Data Visualization (course built from scratch) — with Python, PyTorch, TensorFlow and Tableau.</span><span class="es" hidden>Inteligencia Artificial (pregrado) y Aprendizaje Profundo (posgrado). También Análisis Avanzado de Datos y Data Visualization (curso creado desde cero) — con Python, PyTorch, TensorFlow y Tableau.</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS / TECH STACK -->
 <section id="skills">
   <div class="wrap">
-    <span class="eyebrow"><span class="en">Skills</span><span class="es" hidden>Competencias</span></span>
-    <h2 class="sec-title"><span class="en">Technical skills</span><span class="es" hidden>Habilidades técnicas</span></h2>
+    <span class="eyebrow"><span class="en">Tech stack</span><span class="es" hidden>Stack tecnológico</span></span>
+    <h2 class="sec-title"><span class="en">Tools &amp; technologies</span><span class="es" hidden>Herramientas y tecnologías</span></h2>
+    <p class="sec-lead"><span class="en">The everyday toolkit — from AI and LLMs to web apps, optimization and data science.</span><span class="es" hidden>El kit del día a día — de la IA y los LLMs a las apps web, la optimización y la ciencia de datos.</span></p>
+
     <div class="grid-2" style="align-items:start">
       <div>
         <div class="skillblock">
-          <h4><span class="en">Programming</span><span class="es" hidden>Programación</span></h4>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Julia</span><span class="tag">R</span><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
+          <h4><span class="en">AI, LLMs &amp; machine learning</span><span class="es" hidden>IA, LLMs y machine learning</span></h4>
+          <div class="stack">
+            <div class="chip"><img src="https://cdn.simpleicons.org/claude" alt="Claude" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">CL</span><span class="nm">Claude</span></div>
+            <div class="chip"><img src="https://api.iconify.design/logos:openai-icon.svg" alt="OpenAI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">AI</span><span class="nm">OpenAI</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/pytorch" alt="PyTorch" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">PT</span><span class="nm">PyTorch</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/tensorflow" alt="TensorFlow" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">TF</span><span class="nm">TensorFlow</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/keras" alt="Keras" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">KR</span><span class="nm">Keras</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/scikitlearn" alt="scikit-learn" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">SK</span><span class="nm">scikit-learn</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/huggingface" alt="Hugging Face" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">HF</span><span class="nm">Hugging Face</span></div>
+          </div>
         </div>
         <div class="skillblock">
-          <h4><span class="en">Optimization &amp; simulation</span><span class="es" hidden>Optimización y simulación</span></h4>
-          <div class="tags"><span class="tag">GAMS</span><span class="tag">Pyomo</span><span class="tag">JuMP</span><span class="tag">AMPL</span><span class="tag">SciPy</span><span class="tag">SimPy</span><span class="tag">ProModel</span><span class="tag">FlexSim</span></div>
+          <h4><span class="en">Web, cloud &amp; apps</span><span class="es" hidden>Web, nube y apps</span></h4>
+          <div class="stack">
+            <div class="chip"><img src="https://cdn.simpleicons.org/nextdotjs" alt="Next.js" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">NX</span><span class="nm">Next.js</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/react" alt="React" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">RE</span><span class="nm">React</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/vercel" alt="Vercel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">▲</span><span class="nm">Vercel</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/supabase" alt="Supabase" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">SB</span><span class="nm">Supabase</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">ND</span><span class="nm">Node.js</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/streamlit" alt="Streamlit" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">ST</span><span class="nm">Streamlit</span></div>
+          </div>
         </div>
         <div class="skillblock">
-          <h4><span class="en">AI &amp; machine learning</span><span class="es" hidden>IA y machine learning</span></h4>
-          <div class="tags"><span class="tag">scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">PyTorch</span><span class="tag">statsmodels</span><span class="tag">LLMs</span></div>
+          <h4><span class="en">Dev tools</span><span class="es" hidden>Herramientas de desarrollo</span></h4>
+          <div class="stack">
+            <div class="chip"><img src="https://api.iconify.design/logos:visual-studio-code.svg" alt="VS Code" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">VS</span><span class="nm">VS Code</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/git" alt="Git" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">GT</span><span class="nm">Git</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/github" alt="GitHub" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">GH</span><span class="nm">GitHub</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/jupyter" alt="Jupyter" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">JP</span><span class="nm">Jupyter</span></div>
+          </div>
         </div>
       </div>
       <div>
         <div class="skillblock">
+          <h4><span class="en">Languages</span><span class="es" hidden>Lenguajes</span></h4>
+          <div class="stack">
+            <div class="chip"><img src="https://cdn.simpleicons.org/python" alt="Python" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">PY</span><span class="nm">Python</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/julia" alt="Julia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">JL</span><span class="nm">Julia</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/r" alt="R" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">R</span><span class="nm">R</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">JS</span><span class="nm">JavaScript</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/html5" alt="HTML5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">H5</span><span class="nm">HTML5</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/css" alt="CSS3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">C3</span><span class="nm">CSS3</span></div>
+          </div>
+        </div>
+        <div class="skillblock">
           <h4><span class="en">Data &amp; visualization</span><span class="es" hidden>Datos y visualización</span></h4>
-          <div class="tags"><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Bokeh</span><span class="tag">D3.js</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Jupyter</span></div>
+          <div class="stack">
+            <div class="chip"><img src="https://cdn.simpleicons.org/pandas" alt="pandas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">pd</span><span class="nm">pandas</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/numpy" alt="NumPy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Np</span><span class="nm">NumPy</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/plotly" alt="Plotly" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Pl</span><span class="nm">Plotly</span></div>
+            <div class="chip"><img src="https://api.iconify.design/logos:tableau.svg" alt="Tableau" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">Tb</span><span class="nm">Tableau</span></div>
+            <div class="chip"><img src="https://api.iconify.design/logos:microsoft-power-bi.svg" alt="Power BI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">BI</span><span class="nm">Power BI</span></div>
+            <div class="chip"><img src="https://cdn.simpleicons.org/d3" alt="D3.js" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">D3</span><span class="nm">D3.js</span></div>
+          </div>
         </div>
         <div class="skillblock">
-          <h4><span class="en">Writing &amp; presenting</span><span class="es" hidden>Redacción y presentaciones</span></h4>
-          <div class="tags"><span class="tag">LaTeX</span><span class="tag">Beamer</span><span class="tag">Reveal.js</span><span class="tag">Office</span><span class="tag">Google Docs</span></div>
+          <h4><span class="en">Optimization &amp; simulation</span><span class="es" hidden>Optimización y simulación</span></h4>
+          <div class="tags"><span class="tag">GAMS</span><span class="tag">Pyomo</span><span class="tag">JuMP</span><span class="tag">AMPL</span><span class="tag">SciPy</span><span class="tag">SimPy</span><span class="tag">FlexSim</span><span class="tag">ProModel</span></div>
         </div>
         <div class="skillblock">
-          <h4><span class="en">E-learning &amp; languages</span><span class="es" hidden>E-learning e idiomas</span></h4>
-          <div class="tags"><span class="tag">Moodle</span><span class="tag">Blackboard</span><span class="tag">Canvas</span><span class="tag">English — TOEFL B2</span></div>
+          <h4><span class="en">Writing, e-learning &amp; languages</span><span class="es" hidden>Redacción, e-learning e idiomas</span></h4>
+          <div class="tags"><span class="tag">LaTeX</span><span class="tag">Beamer</span><span class="tag">Reveal.js</span><span class="tag">Moodle</span><span class="tag">Canvas</span><span class="tag">English — TOEFL B2</span></div>
         </div>
       </div>
     </div>
